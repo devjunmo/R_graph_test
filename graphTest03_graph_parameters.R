@@ -135,11 +135,15 @@ plot(faithful, pch=19, col="tomato",
 # 크기설정
 
 k <- seq(0.5, 1.5, 0.25)
-y <- rep(1, length(x))
+y <- rep(1, length(k))
 
+
+plot(k, y, pch=19, cex=1, # 포인트에 대한 스케일값 지정
+     main="effect of cex on symbol and text size")
 plot(k, y, pch=19, cex=k, # 포인트에 대한 스케일값 지정
      main="effect of cex on symbol and text size")
-text(x=k, y+0.2, labels = x, cex=x) # text의 x에 준 인수 k를 출력
+
+text(x=k, y+0.2, labels = k, cex=k) # text의 x에 준 인수 k를 출력
 
 plot(k, y, pch=19, cex=k, # 포인트에 대한 스케일값 지정
      main="effect of cex on symbol and text size",

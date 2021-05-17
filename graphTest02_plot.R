@@ -67,3 +67,4 @@ plot(faithful.lm) # 진단도표
 
 
 
+

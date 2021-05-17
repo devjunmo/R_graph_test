@@ -1,16 +1,17 @@
 
-
+head(Titanic)
 str(Titanic)
 class <- margin.table(Titanic, margin = 1)
 class
 
-barplot(class,
+barplot(class, # 테이블 넣어주면 알아서 기본 바차트 생성됨
         main="simple bar chart")
 
 survival.by.class <- margin.table(Titanic, margin = c(4, 1))
-survival.by.class
 
-barplot(survival.by.class,
+survival.by.class # 2차원 교차표
+
+barplot(survival.by.class, # 교차표 주면 한 범주에 두개씩
         main = "stacked bar chart",
         beside = T)
 
@@ -71,7 +72,7 @@ spine(t(suv.prop), gp=gpar(fill=c("mistyrose", 'lightblue')),
 
 head(chickwts)
 str(chickwts)
-h <- tapply(chickwts$weight, chickwts$feed, mean)
+h <- tapply(chickwts$weight, chickwts$feed, mean) # 그룹별 apply 적용함수
 h
 
 barplot(h, ylim=c(0, 400), las=3)
@@ -82,7 +83,7 @@ barplot(h, ylim=c(0, 400), las=3)
 str(UCBAdmissions)
 
 admission.by.dept <- margin.table(UCBAdmissions, c(1, 3))
-admission.by.dept
+admission.by.dept # 교차표 
 
 barplot(admission.by.dept,
         density = 15,

@@ -14,6 +14,7 @@ plot(faithful, pch=19, col="cornflowerblue",
      font.lab=3, font.axis=2) 
 
 
+
 par("mai") # 인치단위 마진설정
 par("mar") # 라인단위 마진설정
 

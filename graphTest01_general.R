@@ -9,9 +9,12 @@ points(eruptions.long, col="red", pch=19) # 점에 효과를 주는 저수준 �
                                           # 반드시 기존에 그래프를 생성해놔야 함
 
 dev.off() # 그래프 삭제
-points(eruptions.long, col="red", pch=19) # err
+points(eruptions.long, col="red", pch=19) # err (바로 저수준은 불가)
 
+old.par = par(mfrow=c(2, 2))
 faithful.lm.model <- lm(waiting ~ eruptions, faithful)
+plot(faithful.lm.model)
+par(old.par)
 
 
 plot(faithful)
